@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 
 export default function Header() {
-	console.log(process.env.REACT_APP_OMDB_KEY)
 	return (
 		<header>
 			<div className="container">
