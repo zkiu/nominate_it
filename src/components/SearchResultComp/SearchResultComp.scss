@@ -1,5 +1,39 @@
 .searchResultContainer {
+	display: flex;
+	flex-wrap: wrap;
+	// background-color: green;
 	.resultList {
 		display: flex;
+		width: 400px;
+		padding: 0.5rem;
+		// background-color: red;
+	}
+	img {
+		height: 100px;
+		margin-right: 1rem;
+	}
+	.infoContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	h2 {
+		font-size: 1.8rem;
+		margin-bottom: 0.5rem;
+	}
+	p {
+		font-size: 1.8rem;
+	}
+	button {
+		height: 25px;
+		width: 100px;
+		background-color: gold;
+		border-radius: 5px;
+		border: 1px solid black;
+		&:disabled {
+			// background-color: green;
+			background-color: lightyellow;
+			color: grey;
+		}
 	}
 }

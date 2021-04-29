@@ -11,10 +11,14 @@ export default function SearchResultComp({searchResults}) {
 				src={movie.Poster.toLowerCase() !== 'n/a' ? movie.Poster : defaultImage}
 				alt="movie poster"
 			/>
-			<h2>{movie.Title}</h2>
-			<p>{movie.Year}</p>
-			{/* // TODO: add feature to nominate */}
-			<button>Nominate</button>
+			<div className="infoContainer">
+				<div className="infoContainerText">
+					<h2>{movie.Title}</h2>
+					<p>{movie.Year}</p>
+				</div>
+				{/* // TODO: add feature to nominate */}
+				<button>Nominate</button>
+			</div>
 		</li>
 	))
 	return (
