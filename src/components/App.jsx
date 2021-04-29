@@ -4,6 +4,7 @@ import ToastComp from './ToastComp/ToastComp'
 import Header from './Header/Header'
 import Banner from './Banner/Banner'
 import Search from './Search/Search'
+import Nominate from './Nominate/Nominate'
 
 // TODO: delete console & comments, remove unused modules
 
@@ -15,6 +16,8 @@ export default function App() {
 			<Header />
 			<Banner nominatedList={nominatedList} />
 			<Search />
+			<Nominate />
+
 			<ToastComp />
 		</main>
 	)
