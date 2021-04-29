@@ -1,7 +1,11 @@
-import { Component } from "react";
-
-// import Header from "./Header/Header";
+import Header from './Header/Header'
+import SearchComp from './SearchComp/SearchComp'
 
 export default function App() {
-	return <p>Main Page</p>;
+	return (
+		<main>
+			<Header />
+			{/* <SearchComp /> */}
+		</main>
+	)
 }
