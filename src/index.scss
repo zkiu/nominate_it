@@ -1,7 +1,8 @@
 // NOTE variables and mixins need to loaded 1st
-@import "./partials/variables";
-@import "./partials/fonts";
-@import "./partials/general";
+@import './partials/variables';
+@import './partials/fonts';
+@import './partials/general';
 
 // Component Specifics
-@import "./components/App.scss";
+@import './components/App.scss';
+@import './components/SearchComp/SearchComp.scss';
