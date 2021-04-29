@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {toast} from 'react-toastify'
 
+import {removeDuplicateId} from '../../services/util/removeDuplicateId'
+
 export default function SearchBarComp({
 	setSearchResults,
 	setTotalPage,
@@ -10,6 +12,7 @@ export default function SearchBarComp({
 	// const [searchResults, setSearchResults] = useState([])
 	// const [totalPage, setTotalPage] = useState(1)
 	// const [resultPage, setResultPage] = useState(1)
+	// -- search year not yet implemented
 	const [searchYear, setSearchYear] = useState('')
 
 	// set pagination with page number
@@ -17,6 +20,10 @@ export default function SearchBarComp({
 	function handleSubmitQuery(e) {
 		e.preventDefault()
 		let title = e.target.query.value
+		if (title.length === 0) {
+			toast.info('Please enter a search text first')
+			return
+		}
 		axios
 			.get(
 				`http://www.omdbapi.com/?apikey=${
@@ -30,7 +37,7 @@ export default function SearchBarComp({
 				if (data.Response === 'False') {
 					toast.error('🛑 ' + data.Error + ' Please change the search')
 				} else {
-					setSearchResults(data.Search)
+					setSearchResults(removeDuplicateId(data.Search))
 					setTotalPage(data.totalResults)
 				}
 			})
