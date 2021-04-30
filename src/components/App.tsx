@@ -14,14 +14,17 @@ import Nominate from './Nominate/Nominate'
 export default function App() {
 	const [nominatedList, setNominatedList] = useState<Movie[]>([])
 
-	const addMovie = (movie: Movie) => {
+	const addMovie = (movie: Movie): void => {
 		if (nominatedList.length === 5) {
 			toast.error('⚠ You can only nominate a maximum of 5 movies')
 			return
 		}
-		console.log('before', nominatedList)
 		setNominatedList([...nominatedList, movie])
-		console.log('after', nominatedList)
+	}
+	const removeMovie = (movie: Movie): void => {
+		setNominatedList([
+			...nominatedList.filter((item) => item.imdbID !== movie.imdbID),
+		])
 	}
 
 	return (
@@ -29,7 +32,7 @@ export default function App() {
 			<Header />
 			<Banner />
 			<Search addMovie={addMovie} />
-			<Nominate />
+			<Nominate removeMovie={removeMovie} nominatedList={nominatedList} />
 
 			<ToastComp />
 		</main>
