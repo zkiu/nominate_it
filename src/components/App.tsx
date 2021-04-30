@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import ToastComp from './ToastComp/ToastComp'
+import {toast} from 'react-toastify'
 
 import Header from './Header/Header'
 import Banner from './Banner/Banner'
