@@ -3,8 +3,13 @@ import {Movie} from '../../services/typescript'
 
 import defaultImage from '../../assets/images/poster_default.jpg'
 
-export default function SearchResultComp({searchResults, addMovie}) {
+export default function SearchResultComp({
+	searchResults,
+	addMovie,
+	nominatedList,
+}) {
 	const [resultPageNum, setResultPageNum] = useState(1)
+	const nominatedListID = nominatedList.map((movie: Movie) => movie.imdbID)
 
 	let list = searchResults.map((movie: Movie) => (
 		<li key={movie.imdbID} className="resultList">
@@ -18,6 +23,7 @@ export default function SearchResultComp({searchResults, addMovie}) {
 					<p>{movie.Year}</p>
 				</div>
 				<button
+					disabled={nominatedListID.includes(movie.imdbID)}
 					onClick={(e) => {
 						addMovie(movie)
 					}}

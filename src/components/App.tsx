@@ -31,7 +31,7 @@ export default function App() {
 		<main>
 			<Header />
 			<Banner />
-			<Search addMovie={addMovie} />
+			<Search addMovie={addMovie} nominatedList={nominatedList} />
 			<Nominate removeMovie={removeMovie} nominatedList={nominatedList} />
 
 			<ToastComp />
