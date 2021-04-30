@@ -4,11 +4,9 @@ import {toast} from 'react-toastify'
 
 import {removeDuplicateId} from '../../services/util/removeDuplicateId'
 
-export default function SearchBarComp({
-	setSearchResults,
-	setTotalPage,
-	// resultPage,
-}) {
+export default function SearchBarComp(
+	{setSearchResults, setTotalPage} // resultPage,
+) {
 	// const [searchResults, setSearchResults] = useState([])
 	// const [totalPage, setTotalPage] = useState(1)
 	// const [resultPage, setResultPage] = useState(1)

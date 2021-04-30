@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
+import {Movie} from '../../services/typescript'
 
 import defaultImage from '../../assets/images/poster_default.jpg'
 
-export default function SearchResultComp({searchResults}) {
+export default function SearchResultComp({searchResults, addMovie}) {
 	const [resultPageNum, setResultPageNum] = useState(1)
 
-	let list = searchResults.map((movie) => (
+	let list = searchResults.map((movie: Movie) => (
 		<li key={movie.imdbID} className="resultList">
 			<img
 				src={movie.Poster.toLowerCase() !== 'n/a' ? movie.Poster : defaultImage}
@@ -17,7 +18,13 @@ export default function SearchResultComp({searchResults}) {
 					<p>{movie.Year}</p>
 				</div>
 				{/* // TODO: add feature to nominate */}
-				<button>Nominate</button>
+				<button
+					onClick={(e) => {
+						addMovie(movie)
+					}}
+				>
+					Nominate
+				</button>
 			</div>
 		</li>
 	))
