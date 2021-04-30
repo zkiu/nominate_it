@@ -1,1 +1,8 @@
-// blank
+.banner {
+	background-color: black;
+	color: white;
+	overflow: hidden;
+	.bannerList {
+		display: flex;
+	}
+}
