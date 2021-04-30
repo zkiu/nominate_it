@@ -23,7 +23,8 @@ export default function SearchResultComp({searchResults}) {
 	))
 	return (
 		<>
-			<h1>Pagination</h1>
+			<h1>Search Results:</h1>
+			<h2>Pagination</h2>
 			<ul className="searchResultContainer">{list}</ul>
 		</>
 	)

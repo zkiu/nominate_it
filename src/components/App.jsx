@@ -14,7 +14,7 @@ export default function App() {
 	return (
 		<main>
 			<Header />
-			<Banner nominatedList={nominatedList} />
+			<Banner />
 			<Search />
 			<Nominate />
 

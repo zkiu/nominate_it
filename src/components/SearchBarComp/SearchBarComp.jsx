@@ -48,6 +48,7 @@ export default function SearchBarComp({
 			<input
 				type="text"
 				className=""
+				autoFocus
 				placeholder="Search Movie by Title"
 				name="query"
 			/>
