@@ -17,7 +17,6 @@ export default function SearchResultComp({searchResults, addMovie}) {
 					<h2>{movie.Title}</h2>
 					<p>{movie.Year}</p>
 				</div>
-				{/* // TODO: add feature to nominate */}
 				<button
 					onClick={(e) => {
 						addMovie(movie)
