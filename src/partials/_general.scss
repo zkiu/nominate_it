@@ -22,3 +22,23 @@ textarea:focus,
 button:focus {
 	outline: none;
 }
+
+button {
+	cursor: pointer;
+	height: 25px;
+	width: 100px;
+	background-color: gold;
+	border-radius: 5px;
+	border: 1px solid black;
+	&:hover {
+		position: relative;
+		bottom: 2px;
+		box-shadow: 5px 5px 0px 0px #ebebeb;
+		font-weight: bold;
+	}
+	&:disabled {
+		// background-color: green;
+		background-color: lightyellow;
+		color: grey;
+	}
+}
