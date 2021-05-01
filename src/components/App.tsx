@@ -21,7 +21,6 @@ export default function App() {
 		}
 		if (nominatedList.length === 4) {
 			toast.success('🦄 Your top 5 movies are awesome!')
-			return
 		}
 		setNominatedList([...nominatedList, movie])
 	}
