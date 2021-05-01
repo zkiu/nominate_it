@@ -8,10 +8,10 @@ export default function SearchResultComp({
 	addMovie,
 	nominatedList,
 }) {
-	const [resultPageNum, setResultPageNum] = useState(1)
+	// const [resultPageNum, setResultPageNum] = useState(1)
 	const nominatedListID = nominatedList.map((movie: Movie) => movie.imdbID)
 
-	let list = searchResults.slice(0, 8).map((movie: Movie) => (
+	let list = searchResults.map((movie: Movie) => (
 		<li key={movie.imdbID} className="resultList">
 			<img
 				src={movie.Poster.toLowerCase() !== 'n/a' ? movie.Poster : defaultImage}
@@ -35,21 +35,23 @@ export default function SearchResultComp({
 	))
 	return (
 		<>
-			<ul className="searchResultContainer">
-				<li className="resultList">
+			<p className="alertMessage"></p>
+			{searchResults !== 0 && (
+				<>
 					<p className="resultMessage">Search Results:</p>
-				</li>
-				{list}
-				{searchResults.length > 8 ? (
-					<li className="resultList">
+					<ul className="searchResultContainer">
+						<li className="resultList"></li>
+						{list}
+					</ul>
+					{searchResults.length > 8 ? (
 						<p className="resultMessage">
 							Too many results.
 							<br />
 							Please refine your search query.
 						</p>
-					</li>
-				) : null}
-			</ul>
+					) : null}
+				</>
+			)}
 		</>
 	)
 }
