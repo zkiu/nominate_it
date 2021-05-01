@@ -5,7 +5,7 @@ export default function Header() {
 		<header>
 			<div className="container">
 				<div className="logoContainer">
-					<h1 className="logo hover">🍿 The Shoppies: Nomitate It!</h1>
+					<h1 className="logo hover">The Shoppies: Nomitate It!</h1>
 				</div>
 				<HeaderBtnComp />
 			</div>

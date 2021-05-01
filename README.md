@@ -18,7 +18,6 @@ This app as the main core requirements:
 <li>Movies in search results can be added and removed from the nomination list</li>
 <li>If a search result has already been nominated, disable its nominate button.</li>
 <li>Display a banner when the user has 5 nominations.</li>
-
 </ol>
 
 ## The tools
@@ -28,8 +27,15 @@ This app as the main core requirements:
 
 This App is put together with React and styled with SASS.
 
+## Issues Encountered
+
+<ol>
+<li>As of 2021/05/01, there are some issues with the OMDB API:
+API returns duplicate movies: A search query of ‘king’ returns 2 identical entries (imdbID = tt1972591). This duplication has been addressed in my code, however, my hit list will show less than 10 hits per page.</li>
+<li>API only matches whole words: A search query of ‘cool+running’ will not yield the movie Cool Runnings as the ‘s’ is not entered at the end of the query string.</li>
+</ol>
+
 ## Contact
 
 [LinkedIn](https://www.linkedin.com/in/devkiu/)
-
 😉 I am looking for work
