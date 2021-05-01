@@ -32,13 +32,15 @@ export default function App() {
 	}
 
 	return (
-		<main>
+		<>
 			<Header />
-			{nominatedList.length === 5 && <Banner nominatedList={nominatedList} />}
-			<Search addMovie={addMovie} nominatedList={nominatedList} />
-			<Nominate removeMovie={removeMovie} nominatedList={nominatedList} />
+			<main>
+				{nominatedList.length === 5 && <Banner nominatedList={nominatedList} />}
+				<Search addMovie={addMovie} nominatedList={nominatedList} />
+				<Nominate removeMovie={removeMovie} nominatedList={nominatedList} />
 
-			<ToastComp />
-		</main>
+				<ToastComp />
+			</main>
+		</>
 	)
 }

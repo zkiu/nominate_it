@@ -1,0 +1,24 @@
+.profile-container {
+	display: flex;
+	justify-content: flex-end;
+	flex-flow: wrap;
+
+	// justify-content: center;
+	// width: 500px;
+	// margin: 0 auto;
+	// padding: 2rem 0 2rem 0;
+
+	.profileBtn {
+		position: relative;
+		margin-left: 2rem;
+		height: 6rem;
+		width: 6rem;
+		color: darkblue;
+		transition: all 0.3s;
+
+		&:hover {
+			color: blue;
+			top: -5px;
+		}
+	}
+}

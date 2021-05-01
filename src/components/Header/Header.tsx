@@ -1,14 +1,13 @@
-import React, {useState} from 'react'
+import HeaderBtnComp from '../HeaderBtnComp/HeaderBtnComp'
 
 export default function Header() {
 	return (
 		<header>
 			<div className="container">
 				<div className="logoContainer">
-					{/* <Link to="/" className="logo hover"> */}
-					🎥 Nomitate It!
-					{/* </Link> */}
+					<h1 className="logo hover">🍿 Nomitate It!</h1>
 				</div>
+				<HeaderBtnComp />
 			</div>
 		</header>
 	)
