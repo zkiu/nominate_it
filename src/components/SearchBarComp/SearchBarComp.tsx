@@ -38,6 +38,12 @@ export default function SearchBarComp(
 					setTotalPage(data.totalResults)
 				}
 			})
+			.catch((error) => {
+				toast.error(
+					'💀 An error occured while contacting the OMDB movie server 😢'
+				)
+				console.error(error)
+			})
 	}
 
 	return (
