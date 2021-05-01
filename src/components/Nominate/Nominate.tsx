@@ -21,7 +21,7 @@ export default function Nominate({nominatedList, removeMovie}) {
 		<section className="nominations">
 			<h2>Nominate 5 movies:</h2>
 			{nominatedList.length === 0 ? (
-				<h3>No movies nominated yet</h3>
+				<em className="emptyListMessage">No movies nominated yet</em>
 			) : (
 				<ul className="nominationContainer">{list}</ul>
 			)}

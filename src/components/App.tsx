@@ -35,8 +35,8 @@ export default function App() {
 			<Header />
 			<main>
 				{nominatedList.length === 5 && <Banner nominatedList={nominatedList} />}
-				<Search addMovie={addMovie} nominatedList={nominatedList} />
 				<Nominate removeMovie={removeMovie} nominatedList={nominatedList} />
+				<Search addMovie={addMovie} nominatedList={nominatedList} />
 
 				<ToastComp />
 			</main>
