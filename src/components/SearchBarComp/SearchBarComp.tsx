@@ -47,10 +47,10 @@ export default function SearchBarComp({dispatch}) {
 				value={query}
 				onChange={(e) => setQuery(e.target.value)}
 			/>
-			<p>
-				* The whole word is match exactly. Example: A search of 'king' will not
-				match titles with the word 'kings'
-			</p>
+			<em>
+				NOTE: The whole word is match exactly. Example: A search of 'king' will
+				not match titles with the word 'kings', and vice versa.
+			</em>
 		</div>
 	)
 }
