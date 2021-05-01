@@ -32,15 +32,11 @@ export default function SearchResultComp({
 		</li>
 	))
 	return (
-		<>
-			<p className="alertMessage"></p>
-			{searchResults !== 0 && (
+		<div className="searchResultContainer">
+			{searchResults.length !== 0 && (
 				<>
-					<p className="resultMessage">Search Results:</p>
-					<ul className="searchResultContainer">
-						<li className="resultList"></li>
-						{list}
-					</ul>
+					<p className="mainHeading">Search Results:</p>
+					<ul className="listContainer">{list}</ul>
 					{searchResults.length > 8 ? (
 						<p className="resultMessage">
 							Too many results.
@@ -50,6 +46,6 @@ export default function SearchResultComp({
 					) : null}
 				</>
 			)}
-		</>
+		</div>
 	)
 }
