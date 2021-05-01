@@ -26,9 +26,9 @@
 		justify-content: space-between;
 		margin-left: 1rem;
 		h2 {
-			font-size: 3rem;
+			font-size: 2.4rem;
 			// tip from https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css
-			-webkit-line-clamp: 4;
+			-webkit-line-clamp: 5;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			display: -webkit-box;
