@@ -1,13 +1,11 @@
-import {useState, useReducer} from 'react'
-import axios from 'axios'
-
+import {useReducer} from 'react'
 import {removeDuplicateId} from '../../services/util/removeDuplicateId'
 
 import SearchBarComp from '../SearchBarComp/SearchBarComp'
 import SearchResultComp from '../SearchResultComp/SearchResultComp'
 
-// taken from https://joaoforja.com/blog/5-steps-to-perform-a-search-when-user-stops-typing-using-react-+-hooks-in-a-controlled-component/
 function fetchReducer(state, action) {
+	// taken from https://joaoforja.com/blog/5-steps-to-perform-a-search-when-user-stops-typing-using-react-+-hooks-in-a-controlled-component/
 	switch (action.type) {
 		case 'FETCH_START':
 			return {
@@ -35,10 +33,6 @@ function fetchReducer(state, action) {
 }
 
 export default function Search({addMovie, nominatedList}) {
-	// const [searchResults, setSearchResults] = useState([])
-	// ! totalPage is currently not used. For future features.
-	// const [totalPage, setTotalPage] = useState(1)
-
 	const [{hits, hasError, isLoading}, dispatch] = useReducer(fetchReducer, {
 		hits: [],
 		isLoading: true,
@@ -47,16 +41,14 @@ export default function Search({addMovie, nominatedList}) {
 
 	return (
 		<section>
-			<SearchBarComp
-				// setSearchResults={setSearchResults}
-				dispatch={dispatch}
-				// setTotalPage={setTotalPage}
-			/>
-			<SearchResultComp
-				searchResults={hits}
-				addMovie={addMovie}
-				nominatedList={nominatedList}
-			/>
+			<SearchBarComp dispatch={dispatch} />
+			{!hasError && (
+				<SearchResultComp
+					searchResults={hits}
+					addMovie={addMovie}
+					nominatedList={nominatedList}
+				/>
+			)}
 		</section>
 	)
 }

@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import {Movie} from '../../services/typescript'
 
 import defaultImage from '../../assets/images/poster_default.jpg'
@@ -8,7 +7,6 @@ export default function SearchResultComp({
 	addMovie,
 	nominatedList,
 }) {
-	// const [resultPageNum, setResultPageNum] = useState(1)
 	const nominatedListID = nominatedList.map((movie: Movie) => movie.imdbID)
 
 	let list = searchResults.map((movie: Movie) => (
