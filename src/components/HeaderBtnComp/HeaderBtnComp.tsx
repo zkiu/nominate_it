@@ -8,14 +8,11 @@ export default function AboutPage() {
 			<a href="https://zkiu.github.io/portfolio/">
 				<HiOutlineBriefcase className="profileBtn" />
 			</a>
-			<a href="https://github.com/zkiu">
+			<a href="https://github.com/zkiu/nominate_it">
 				<FaGithubAlt className="profileBtn" />
 			</a>
 			<a href="https://www.linkedin.com/in/devkiu/">
 				<FaLinkedin className="profileBtn" />
-			</a>
-			<a href="mailto:ukeqlee@gmail.com?subject=qstory">
-				<GoMailRead className="profileBtn" />
 			</a>
 		</div>
 	)
