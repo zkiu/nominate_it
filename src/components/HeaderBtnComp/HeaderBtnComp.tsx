@@ -1,5 +1,4 @@
 import {FaGithubAlt, FaLinkedin} from 'react-icons/fa'
-import {GoMailRead} from 'react-icons/go'
 import {HiOutlineBriefcase} from 'react-icons/hi'
 
 export default function AboutPage() {

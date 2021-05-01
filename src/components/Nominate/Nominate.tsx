@@ -1,4 +1,3 @@
-import React, {useState} from 'react'
 import {Movie} from '../../services/typescript'
 
 export default function Nominate({nominatedList, removeMovie}) {

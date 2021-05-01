@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import {Movie} from '../../services/typescript'
 import defaultImage from '../../assets/images/poster_default.jpg'
 
