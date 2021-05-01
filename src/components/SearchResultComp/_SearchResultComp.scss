@@ -1,12 +1,10 @@
 .searchResultContainer {
 	display: flex;
 	flex-wrap: wrap;
-	// background-color: green;
 	.resultList {
 		display: flex;
 		width: 320px;
 		padding: 0.5rem;
-		// background-color: red;
 	}
 	img {
 		height: 100px;
@@ -24,5 +22,11 @@
 	}
 	p {
 		font-size: 1.8rem;
+	}
+	.resultMessage {
+		text-align: center;
+		width: 100%;
+		border-top: 1px solid lightgray;
+		padding-top: 0.5rem;
 	}
 }

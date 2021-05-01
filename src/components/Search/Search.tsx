@@ -13,11 +13,13 @@ export default function Search({addMovie, nominatedList}) {
 				setSearchResults={setSearchResults}
 				setTotalPage={setTotalPage}
 			/>
-			<SearchResultComp
-				searchResults={searchResults}
-				addMovie={addMovie}
-				nominatedList={nominatedList}
-			/>
+			{searchResults.length !== 0 && (
+				<SearchResultComp
+					searchResults={searchResults}
+					addMovie={addMovie}
+					nominatedList={nominatedList}
+				/>
+			)}
 		</section>
 	)
 }

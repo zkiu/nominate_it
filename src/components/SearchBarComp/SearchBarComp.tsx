@@ -20,6 +20,8 @@ export default function SearchBarComp(
 		let title = e.target.query.value
 		if (title.length === 0) {
 			toast.info('Please enter a search text first')
+			setSearchResults([])
+			setTotalPage(1)
 			return
 		}
 		axios
@@ -29,9 +31,6 @@ export default function SearchBarComp(
 				}&s=${title}&type=movie&page=${1}&y=${searchYear}`
 			)
 			.then(({data}) => {
-				console.log(data)
-				console.table(data.Search)
-
 				if (data.Response === 'False') {
 					toast.error('🛑 ' + data.Error + ' Please change the search')
 				} else {
