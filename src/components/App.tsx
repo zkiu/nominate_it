@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import ToastComp from './ToastComp/ToastComp'
 import {toast} from 'react-toastify'
 
@@ -17,6 +17,10 @@ export default function App() {
 	const addMovie = (movie: Movie): void => {
 		if (nominatedList.length === 5) {
 			toast.error('⚠ You can only nominate a maximum of 5 movies')
+			return
+		}
+		if (nominatedList.length === 4) {
+			toast.success('🦄 Your top 5 movies are awesome!')
 			return
 		}
 		setNominatedList([...nominatedList, movie])
