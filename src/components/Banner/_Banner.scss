@@ -1,8 +1,76 @@
 .banner {
-	background-color: black;
+	background-color: #000000;
 	color: white;
-	overflow: hidden;
-	.bannerList {
+
+	.banner_heading {
+		font-size: 2.4rem;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		border-bottom: 1px solid rgb(77, 76, 76);
+	}
+
+	.slideshow_item {
 		display: flex;
+		margin-right: 4rem;
+		padding: 1rem;
+	}
+	img {
+		height: 100%;
+	}
+	.infoContainer {
+		width: 12rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-left: 1rem;
+		h2 {
+			font-size: 3rem;
+			// tip from https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css
+			-webkit-line-clamp: 4;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+		}
+		p {
+			font-size: 1.8rem;
+		}
+	}
+
+	// animation implementation from https://stackoverflow.com/questions/62092177/infinite-sideways-scroll-animation-of-images
+	.slideshow_container {
+		height: 200px;
+		margin: 0 auto;
+		position: relative;
+		transform: translate3d(0, 0, 0);
+		display: flex;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.slideshow_list {
+		height: 100%;
+		transform: translate3d(0, 0, 0);
+		display: flex;
+		animation: moveSlideshow 10s linear infinite;
+	}
+	// .slideshow_list > .slideshow_item {
+	// 	height: 200px;
+	// 	width: auto;
+	// }
+
+	.slideshow_container:hover .slideshow_list {
+		animation-play-state: paused;
+	}
+
+	@keyframes moveSlideshow {
+		0% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(-100%);
+		}
 	}
 }
