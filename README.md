@@ -7,7 +7,7 @@ This web app lets you search through a movie database, and select 5 movies to no
 
 <p align='center'>A screenshot of the interface:</p>
 
-![](nominate.gif)
+![](https://github.com/zkiu/nominate_it/raw/main/Nominate.gif)
 
 This app as the main core requirements:
 
