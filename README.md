@@ -6,8 +6,8 @@
 This web app lets you search through a movie database, and select 5 movies to nominate as your top favourite of all time!
 
 <p align='center'>A screenshot of the interface:</p>
-<p align="center">
-<img src="xyz" width="80%"></p>
+
+![](nominate.gif)
 
 This app as the main core requirements:
 
@@ -23,7 +23,7 @@ This app as the main core requirements:
 ## The tools
 
 <p align="center">
-<img src="xxx" width="50%"></p>
+<img src="https://live.staticflickr.com/65535/51152567044_2955ef9348_m.jpg" width="50%"></p>
 
 This App is put together with React and styled with SASS.
 
