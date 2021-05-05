@@ -80,6 +80,9 @@
 			font-size: 1.8rem;
 			height: 2.4rem;
 			width: 100px;
+			&:hover {
+				box-shadow: 5px 5px 0px 0px #c8c8c8;
+			}
 		}
 	}
 }
