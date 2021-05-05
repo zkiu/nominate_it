@@ -37,8 +37,13 @@ button {
 		font-weight: bold;
 	}
 	&:disabled {
-		pointer-events: none;
+		cursor: default;
 		background-color: lightyellow;
 		color: grey;
+	}
+	&:disabled:hover {
+		bottom: 0px;
+		box-shadow: none;
+		font-weight: 400;
 	}
 }
