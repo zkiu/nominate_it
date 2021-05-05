@@ -1,42 +1,28 @@
-import {Movie} from '../../services/typescript'
+import {useState} from 'react'
 
-import defaultImage from '../../assets/images/poster_default.jpg'
+import SearchResultItemComp from '../../components/SearchResultItemComp/SearchResultItemComp'
 
 export default function SearchResultComp({
 	searchResults,
 	addMovie,
 	nominatedList,
 }) {
-	const nominatedListID = nominatedList.map((movie: Movie) => movie.imdbID)
+	const [itemFocus, setItemFocus] = useState(null)
 
-	let list = searchResults.map((movie: Movie) => (
-		<li key={movie.imdbID} className="resultList">
-			<img
-				src={movie.Poster.toLowerCase() !== 'n/a' ? movie.Poster : defaultImage}
-				alt="movie poster"
-			/>
-			<div className="infoContainer">
-				<div className="infoContainerText">
-					<h2>{movie.Title}</h2>
-					<p>{movie.Year}</p>
-				</div>
-				<button
-					disabled={nominatedListID.includes(movie.imdbID)}
-					onClick={(e) => {
-						addMovie(movie)
-					}}
-				>
-					Nominate
-				</button>
-			</div>
-		</li>
-	))
 	return (
 		<div className="searchResultContainer">
 			{searchResults.length !== 0 && (
 				<>
 					<p className="mainHeading">Search Results:</p>
-					<ul className="listContainer">{list}</ul>
+					<ul className="listContainer">
+						<SearchResultItemComp
+							searchResults={searchResults}
+							addMovie={addMovie}
+							nominatedList={nominatedList}
+							itemFocus={itemFocus}
+							setItemFocus={setItemFocus}
+						/>
+					</ul>
 					{searchResults.length > 8 ? (
 						<p className="resultMessage">
 							Too many results.

@@ -2,35 +2,15 @@
 	.listContainer {
 		display: flex;
 		flex-wrap: wrap;
+		position: relative;
 	}
 	.mainHeading {
 		font-size: 2.4rem;
 		margin-top: 2rem;
 		user-select: none;
 	}
-	.resultList {
-		display: flex;
-		width: 320px;
-		padding: 0.5rem;
-	}
-	img {
-		height: 100px;
-		max-width: 70px;
-		margin-right: 1rem;
-	}
-	.infoContainer {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
-	h2 {
-		font-size: 1.8rem;
-		margin-bottom: 0.5rem;
-	}
-	p {
-		font-size: 1.8rem;
-	}
 	.resultMessage {
+		font-size: 1.8rem;
 		text-align: center;
 		width: 100%;
 		border-top: 1px solid lightgray;
