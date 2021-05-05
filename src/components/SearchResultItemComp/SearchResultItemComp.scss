@@ -3,6 +3,11 @@
 	width: 320px;
 	padding: 0.5rem;
 	cursor: pointer;
+	user-select: none;
+
+	&:hover {
+		background-color: rgb(223, 243, 223);
+	}
 
 	img {
 		height: 100px;
@@ -23,7 +28,9 @@
 	}
 
 	&__Extended {
-		@extend .resultList;
+		display: flex;
+		cursor: default;
+		user-select: none;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -34,6 +41,7 @@
 		width: 100%;
 		height: 100%;
 		color: white;
+
 		img {
 			min-width: 50%;
 			max-width: 90%;
