@@ -1,0 +1,6 @@
+// breakpoints
+@mixin mobile-break {
+	@media screen and (min-width: 400px) {
+		@content;
+	}
+}
