@@ -4,7 +4,6 @@
 		user-select: none;
 	}
 	.nominationContainer {
-		overflow: hidden;
 	}
 	.item {
 		width: 100%;
@@ -15,8 +14,12 @@
 		border-top: 1px solid lightgray;
 		font-size: 1.4rem;
 	}
+	p {
+		align-self: center;
+	}
 	h3 {
 		text-overflow: ellipsis;
+		align-self: center;
 	}
 	.emptyListMessage {
 		font-size: 1.8rem;

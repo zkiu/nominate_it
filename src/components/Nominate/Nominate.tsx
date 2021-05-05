@@ -3,7 +3,6 @@ import {Movie} from '../../services/typescript'
 export default function Nominate({nominatedList, removeMovie}) {
 	const list = nominatedList.map((movie: Movie, i: number) => (
 		<li key={movie.imdbID} className="item">
-			{/* <div className=""> */}
 			<p>{`${i + 1}. `}</p>
 			<h3>{movie.Title}</h3>
 			<p>{movie.Year}</p>
@@ -14,7 +13,6 @@ export default function Nominate({nominatedList, removeMovie}) {
 			>
 				Remove
 			</button>
-			{/* </div> */}
 		</li>
 	))
 	return (
@@ -23,7 +21,7 @@ export default function Nominate({nominatedList, removeMovie}) {
 			{nominatedList.length === 0 ? (
 				<em className="emptyListMessage">No movies nominated yet</em>
 			) : (
-				<ul className="nominationContainer">{list}</ul>
+				<ol className="nominationContainer">{list}</ol>
 			)}
 		</section>
 	)
