@@ -4,7 +4,7 @@ import {Movie} from '../../services/typescript'
 export default function Nominate({nominatedList, removeMovie}) {
 	const list = nominatedList.map((movie: Movie, i: number) => (
 		<CSSTransition
-			key={`listItem-${i}`}
+			key={`listItem-${movie.imdbID}`}
 			timeout={{
 				enter: 800,
 				exit: 500,
