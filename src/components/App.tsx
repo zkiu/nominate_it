@@ -25,9 +25,9 @@ export default function App() {
 		setNominatedList([...nominatedList, movie])
 	}
 	const removeMovie = (movie: Movie): void => {
-		setNominatedList([
-			...nominatedList.filter((item) => item.imdbID !== movie.imdbID),
-		])
+		setNominatedList(
+			nominatedList.filter((item) => item.imdbID !== movie.imdbID)
+		)
 	}
 
 	return (
