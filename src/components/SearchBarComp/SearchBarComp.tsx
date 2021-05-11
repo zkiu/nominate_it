@@ -28,9 +28,8 @@ export default function SearchBarComp({dispatch}) {
 
 	useEffect(() => {
 		const {cancel, token} = axios.CancelToken.source()
-		const timeOutId = setTimeout(() => fetchHits(query, dispatch, token), 500)
+		const timeOutId = setTimeout(() => fetchHits(query, dispatch, token), 300)
 		return () => {
-			// TODO: reason this out
 			cancel('No longer latest query')
 			clearTimeout(timeOutId)
 		}
