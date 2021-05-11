@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import {CSSTransition} from 'react-transition-group'
 import ToastComp from './ToastComp/ToastComp'
 import {toast} from 'react-toastify'
 
@@ -34,7 +35,17 @@ export default function App() {
 		<>
 			<Header />
 			<main>
-				{nominatedList.length === 5 && <Banner nominatedList={nominatedList} />}
+				{/* {nominatedList.length === 5 && <Banner nominatedList={nominatedList} />} */}
+				<CSSTransition
+					in={nominatedList.length === 5}
+					timeout={{
+						enter: 800,
+						exit: 500,
+					}}
+					classNames="banner-"
+				>
+					<Banner nominatedList={nominatedList} />
+				</CSSTransition>
 				<Nominate removeMovie={removeMovie} nominatedList={nominatedList} />
 				<Search addMovie={addMovie} nominatedList={nominatedList} />
 

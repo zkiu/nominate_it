@@ -37,6 +37,24 @@
 		p {
 			font-size: 1.8rem;
 		}
+
+		.banner--enter {
+			width: 0%;
+		}
+		.banner--enter-active {
+			width: 100%;
+			transition: width 0.8s cubic-bezier(0.34, 0.9, 0.64, 1);
+		}
+		.banner--enter-done {
+		}
+		.banner--exit {
+		}
+		.banner--exit-active {
+			width: 0%;
+			transition: transform 0.5s;
+		}
+		.banner--exit-done {
+		}
 	}
 
 	// animation implementation from https://stackoverflow.com/questions/62092177/infinite-sideways-scroll-animation-of-images
@@ -56,10 +74,6 @@
 		display: flex;
 		animation: moveSlideshow 10s linear infinite;
 	}
-	// .slideshow_list > .slideshow_item {
-	// 	height: 200px;
-	// 	width: auto;
-	// }
 
 	.slideshow_container:hover .slideshow_list {
 		animation-play-state: paused;
