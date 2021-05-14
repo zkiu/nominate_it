@@ -36,11 +36,9 @@ export default function App() {
 				{/* {nominatedList.length === 5 && <Banner nominatedList={nominatedList} />} */}
 				<CSSTransition
 					in={nominatedList.length === 5}
-					timeout={{
-						enter: 800,
-						exit: 500,
-					}}
+					timeout={{enter: 800, exit: 500}}
 					classNames="banner-"
+					unmountOnExit={true}
 				>
 					<Banner nominatedList={nominatedList} />
 				</CSSTransition>
