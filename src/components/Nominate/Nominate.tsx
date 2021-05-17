@@ -1,7 +1,11 @@
 import {CSSTransition, TransitionGroup} from 'react-transition-group'
+import {useState} from 'react'
 import {Movie} from '../../services/typescript'
 
 export default function Nominate({nominatedList, removeMovie}) {
+	const [nominationStatus, setNominationStatus] = useState(
+		nominatedList.length === 0
+	)
 	const list = nominatedList.map((movie: Movie, i: number) => (
 		<CSSTransition
 			key={`listItem-${movie.imdbID}`}
@@ -28,13 +32,30 @@ export default function Nominate({nominatedList, removeMovie}) {
 	return (
 		<section className="nominations">
 			<h2>Nominate 5 movies:</h2>
-			{nominatedList.length === 0 ? (
+
+			{nominationStatus && (
 				<em className="emptyListMessage">No movies nominated yet</em>
-			) : (
+			)}
+			<CSSTransition
+				in={nominatedList.length !== 0}
+				timeout={{
+					enter: 1000,
+					exit: 500,
+				}}
+				classNames="item-animation-"
+				unmountOnExit={true}
+				mountOnEnter={true}
+				onExited={() => {
+					setNominationStatus(true)
+				}}
+				onEnter={() => {
+					setNominationStatus(false)
+				}}
+			>
 				<ol className="nominationContainer">
 					<TransitionGroup component={null}>{list}</TransitionGroup>
 				</ol>
-			)}
+			</CSSTransition>
 		</section>
 	)
 }
