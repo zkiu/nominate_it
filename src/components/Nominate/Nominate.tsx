@@ -39,7 +39,7 @@ export default function Nominate({nominatedList, removeMovie}) {
 			<CSSTransition
 				in={nominatedList.length !== 0}
 				timeout={{
-					enter: 1000,
+					enter: 800,
 					exit: 500,
 				}}
 				classNames="item-animation-"
