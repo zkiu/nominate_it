@@ -9,14 +9,13 @@ This web app lets you search through a movie database, and select 5 movies to no
 
 ![](https://github.com/zkiu/nominate_it/raw/main/Nominate.gif)
 
-This app as the main core requirements:
+This app as the following core technical features:
 
 <ol>
 <li>Accepts a string query to search through the movie records of the OMDB's API (https://www.omdbapi.com/)</li>
-<li>Each search result will display a poster image, movie title, year of release, and a button to nominate that film</li>
-<li>Updates to the search string will automatically update the result list</li>
-<li>Movies in search results can be added and removed from the nomination list</li>
-<li>If a search result has already been nominated, disable its nominate button.</li>
+<li>React - to create a SPA</li>
+<li>Redux - statemanagement</li>
+
 <li>Display a banner when the user has 5 nominations.</li>
 </ol>
 
